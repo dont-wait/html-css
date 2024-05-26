@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Random Book</h1>
+    <button id="randomButton">Click to Randomize Book</button>
+    <div id="bookDisplay"></div>
+
+    <script>
+      const bookList = [
+        {
+          title: "Head First HTML and CSS - 2nd Ed.",
+          url: "https://hufiedu-my.sharepoint.com/personal/2001230753_hufi_edu_vn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F2001230753%5Fhufi%5Fedu%5Fvn%2FDocuments%2Fit%5Febook%5Ffree%2FHTML%2DCSS%2FHead%20First%20HTML%20and%20CSS%20%2D%202nd%20Ed%2Epdf&parent=%2Fpersonal%2F2001230753%5Fhufi%5Fedu%5Fvn%2FDocuments%2Fit%5Febook%5Ffree%2FHTML%2DCSS",
+        },
+        {
+          title: "Computer Architecture A Quantitative Approach (5th edition)",
+          url: "path/to/Computer_Architecture.pdf",
+        },
+        {
+          title: "A-Common-Sense-Guide-to-Data-Structures-and-Algorithms",
+          url: "path/to/Data_Structures_and_Algorithms.pdf",
+        },
+        // Add more book data here
+      ];
+
+      const randomButton = document.getElementById("randomButton");
+      const bookDisplay = document.getElementById("bookDisplay");
+
+      randomButton.addEventListener("click", () => {
+        const randomIndex = Math.floor(Math.random() * bookList.length);
+        const randomBook = bookList[randomIndex];
+
+        bookDisplay.innerHTML = `<h2>${randomBook.title}</h2>`;
+
+        const downloadButton = document.createElement("button");
+        downloadButton.textContent = "Tải xuống";
+        downloadButton.addEventListener("click", () => {
+          window.open(randomBook.url, "_blank");
+        });
+        bookDisplay.appendChild(downloadButton);
+      });
+    </script>
+  </body>
+</html>
