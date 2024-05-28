@@ -1,8 +1,41 @@
-#first-heading {
+/* #first-heading {
   color: red;
   font-size: xx-large;
 }
 .second-heading {
   color: green;
   font: 100;
+}
+.second.heading {
+  color: blue;
+}
+.second-heading2 {
+  color: pink;
+} */
+/* .box .second-heading {
+  color: blueviolet;
+}
+* {
+  margin: 0;
+  color: red;
+}
+h2.title {
+  color: aqua;
+}
+h1.second-heading {
+  color: coral;
+}
+/* .third-heading1,
+.third-heading2,
+.third-heading3 {
+  color: blue;
+} */
+/* .redboldder {
+  color: grey;
+} */
+/* .box > .tittle {
+  color: gainsboro;
+} */
+.tittle + .tittle {
+  color: gainsboro;
 }
